@@ -42,17 +42,16 @@ const resolvers = {
       var adminClient = new faunadb.Client({ secret: 'fnAD_-wxDGACBT883NW5NX3nKoF0ue1O0FQSZjti' });
 
       console.log(title,url)
-      // const result = await adminClient.query(
-      //   q.Create(
-      //     q.Collection('vCards'),
-      //     {
-      //       data: {
-      //         c1, c2, c3, rec, msg, sender,
-      //         link: shortid.generate()
-      //       }
-      //     },
-      //   )
-      // )
+      const result = await adminClient.query(
+        q.Create(
+          q.Collection('bookmarks'),
+          {
+            data: {
+              title,url
+            }
+          },
+        )
+      )
       return {id:1,title,url}
     }
   }
