@@ -2,7 +2,6 @@ import React, {useState,useRef} from 'react';
 import { useMutation,useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import "./styles.css";
-import {CardBookmark} from './../components/card';
 const faunadb = require('faunadb'),
   q = faunadb.query;
 
